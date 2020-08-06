@@ -1,4 +1,8 @@
-# Discordeno Bot Template
+# CG STOCK BOT
+
+Simple bot to track Compragamer products out of stock and alert when they become available
+
+## Discordeno Bot Template
 
 This repo is meant as a template which you can use to create a Discord bot very easily using the Discordeno library.
 
@@ -7,7 +11,7 @@ This repo is meant as a template which you can use to create a Discord bot very 
 ## Pre-requisites
 
 - Deno
-- [Velociraptor](https://deno.land/x/velociraptor@v1.0.0-beta.5) *(NOT REQUIRED)* - This can help make coding the bot a lot easier. *Highly recommended*.
+- [Velociraptor](https://deno.land/x/velociraptor@v1.0.0-beta.5) _(NOT REQUIRED)_ - This can help make coding the bot a lot easier. _Highly recommended_.
 
 ## Step By Step
 
@@ -27,7 +31,7 @@ export const configs = {
 
 **Note:** Having to type all that can be quite annoying everytime you want to start a bot. To make it simpler, this template supports Velociraptor module. Once you install it(link above in pre-requisites) it is as simple as `vr start` or `vr update`(to update) or `vr dev` to both update and start the bot at once.
 
-**Note:** To run the bot with `PM2`: `pm2 start mod.ts --interpreter="deno" --interpreter-args="run --allow-net --allow-read -r" `
+**Note:** To run the bot with `PM2`: `pm2 start mod.ts --interpreter="deno" --interpreter-args="run --allow-net --allow-read -r"`
 
 The `-r` is short for `--reload`, it reloads your deno cache whenever the bot restarts to get the latest and greatest changes to Discordeno. You don't have to include it.
 
