@@ -1,6 +1,6 @@
 # CG STOCK BOT
 
-Simple bot to track Compragamer products out of stock and alert when they become available
+Simple Discord bot to track Compragamer products out of stock and alert when they become available
 
 ## Discordeno Bot Template
 
