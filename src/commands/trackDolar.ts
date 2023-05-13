@@ -29,24 +29,20 @@ const checkDolarTask = () => {
     const dolar_crypto = await getDolarCrypto()
 
     if (dolar_blue !== latestValues.dolar_blue) {
-      latestValues.dolar_blue = dolar_blue
       sendMessage(task.channel, {
-        embed: {
-          title: `CAMBIO EN EL DOLAR BLUE`,
-          description: `El blue subió a $${dolar_blue}`,
-        },
-        content: task.member.mention,
+        content: `El dolar blue ${dolar_blue > latestValues.dolar_blue ? "subió" : "bajó"} a $${dolar_blue}\n${
+          task.member.mention
+        }`,
       })
+      latestValues.dolar_blue = dolar_blue
     }
     if (dolar_crypto !== latestValues.dolar_crypto) {
-      latestValues.dolar_crypto = dolar_crypto
       sendMessage(task.channel, {
-        embed: {
-          title: `CAMBIO EN EL DOLAR CRYPTO`,
-          description: `El blue subió a $${dolar_crypto}`,
-        },
-        content: task.member.mention,
+        content: `El dolar cripto ${dolar_crypto > latestValues.dolar_crypto ? "subió" : "bajó"} a $${dolar_crypto}\n${
+          task.member.mention
+        }`,
       })
+      latestValues.dolar_crypto = dolar_crypto
     }
   })
 }

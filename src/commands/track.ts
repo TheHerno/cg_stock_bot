@@ -1,4 +1,4 @@
-import { every15Minute } from "https://deno.land/x/deno_cron/cron.ts"
+import { every15Minute } from "https://deno.land/x/deno_cron@v1.0.0/cron.ts"
 import { botCache } from "../../mod.ts"
 import checkStock from "../utils/checkStock.ts"
 import { sendMessage } from "https://deno.land/x/discordeno@v7.0.0/src/handlers/channel.ts"
