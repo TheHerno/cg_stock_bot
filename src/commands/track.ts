@@ -13,9 +13,9 @@ interface StockTask {
 
 every15Minute(() => checkStockTask())
 
-let taskLists: Array<StockTask> = []
+const taskLists: Array<StockTask> = []
 
-const checkStockTask = async () => {
+const checkStockTask = () => {
   taskLists.forEach(async (task, index) => {
     const stock = await checkStock(task.product)
     if (stock) {
@@ -35,11 +35,11 @@ const checkStockTask = async () => {
 botCache.commands.set(`track`, {
   name: `track`,
   guildOnly: true,
-  execute: (message, _args, guild) => {
+  execute: (message, _args, _guild) => {
     const member = message.member()!
     const products = message.content.split(" ")
     products.shift() // delete the !check
-    products.forEach(async (product: string) => {
+    products.forEach((product: string) => {
       taskLists.push({ member, channel: message.channel, product: product })
       sendMessage(message.channel, {
         content: `Siguiendo el estado del stock del producto ${product} a pedido de ${member.mention}.
