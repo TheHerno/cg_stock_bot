@@ -1,9 +1,9 @@
 import { every15Minute } from "https://deno.land/x/deno_cron/cron.ts"
 import { botCache } from "../../mod.ts"
 import checkStock from "../utils/checkStock.ts"
-import { sendMessage } from "https://raw.githubusercontent.com/Skillz4Killz/Discordeno/v7/src/handlers/channel.ts"
-import { Member } from "https://raw.githubusercontent.com/Skillz4Killz/Discordeno/master/src/structures/member.ts"
-import { Channel } from "https://raw.githubusercontent.com/Skillz4Killz/Discordeno/master/src/structures/channel.ts"
+import { sendMessage } from "https://deno.land/x/discordeno@v7.0.0/src/handlers/channel.ts"
+import { Member } from "https://deno.land/x/discordeno@v7.0.0/src/structures/member.ts"
+import { Channel } from "https://deno.land/x/discordeno@v7.0.0/src/structures/channel.ts"
 
 interface StockTask {
   product: string

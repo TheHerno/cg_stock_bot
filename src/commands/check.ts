@@ -1,11 +1,11 @@
 import { botCache } from "../../mod.ts"
 import checkStock from "../utils/checkStock.ts"
-import { sendMessage } from "https://raw.githubusercontent.com/Skillz4Killz/Discordeno/v7/src/handlers/channel.ts"
+import { sendMessage } from "https://deno.land/x/discordeno@v7.0.0/src/handlers/channel.ts"
 
 botCache.commands.set(`check`, {
   name: `check`,
   guildOnly: true,
-  execute: (message, _args, guild) => {
+  execute: (message, _args, _guild) => {
     const author = message.member()!
     console.log(author.mention)
     const products = message.content.split(" ")
